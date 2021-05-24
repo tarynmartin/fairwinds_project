@@ -1,0 +1,12 @@
+.square {
+  height: 100px;
+  width: 100px;
+  border: solid;
+}
+
+.no-click {
+  pointer-events: none;
+  height: 100px;
+  width: 100px;
+  border: solid;
+}
