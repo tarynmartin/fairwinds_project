@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Header from './Header';
 import LandingPage from './LandingPage';
@@ -9,8 +9,48 @@ function App() {
   const [landingPage, showLanding] = useState(true);
   const [gameboard, showGameboard] = useState(false);
   const [record, showRecord] = useState(false)
+  const [currentPlayer, setCurrent] = useState('');
+  const [computer, setComputer] = useState('');
+  const [squares, setSquares] = useState([null, null, null, null, null, null, null, null, null]);
+
+  const [winningSquares, setWinning] = useState(null);
+
+  useEffect(() => {
+    const possibleWins = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6]
+    ]
+
+    for (var i = 0; i < possibleWins.length; i++) {
+      const a = possibleWins[i][0];
+      const b = possibleWins[i][1];
+      const c = possibleWins[i][2];
+      if (squares[a] && squares[b] && squares[c]) {
+        if (squares[a] === squares[b] && squares[a] === squares[c]) {
+          setWinning(possibleWins[i])
+          setCurrent(squares[a])
+          return true;
+        }
+      }
+    }
+
+    return false;
+  }, [squares])
 
   const playGame = () => {
+    setCurrent(player)
+    if (player === 'X') {
+      setComputer('O')
+    } else {
+      setComputer('X')
+    }
+
     showLanding(false);
     showGameboard(true);
   }
@@ -22,7 +62,7 @@ function App() {
         <LandingPage setPlayer={setPlayer} playGame={playGame}/>
       }
       {gameboard && player !== '' &&
-        <GameBoard />
+        <GameBoard winningSquares={winningSquares} player={currentPlayer} squares={squares} setSquares={setSquares} setCurrent={setCurrent}/>
       }
     </div>
   );
@@ -30,5 +70,4 @@ function App() {
 
 export default App;
 
-// - unload - welcome
 // - game starts - toast message ?
