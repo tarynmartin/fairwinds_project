@@ -5,10 +5,10 @@ const LandingPage = ({setPlayer, playGame}) => {
     <section>
       <h1>PICK YOUR PLAYER</h1>
       <article>
-        <button onClick={() => setPlayer('x')}>
+        <button onClick={() => setPlayer('X')}>
           X
         </button>
-        <button onClick={() => setPlayer('o')}>
+        <button onClick={() => setPlayer('O')}>
           O
         </button>
       </article>
@@ -19,5 +19,5 @@ const LandingPage = ({setPlayer, playGame}) => {
 
 export default LandingPage;
 
-// Pick Your Player
-// x || o w / bar underneath -> click changes bar 
+// x || o w / bar underneath -> click changes bar
+// button to match w/computer
