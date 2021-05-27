@@ -24,10 +24,11 @@ const GameBoard = ({ winningSquares, computer, player, squares, setSquares, setC
     <section className="game">
       <div className="message">
         {winningSquares && 
-          <h1>{player} WINS!</h1>
+          <h1 className="message-title">{player} WINS AGA
+          IN!</h1>
         }
         {!winningSquares && 
-          <h1>{player}'S TURN!</h1>
+          <h1 className="message-title">{player}'S TURN!</h1>
         }
       </div>
       <article className="gameboard">
@@ -47,15 +48,16 @@ const GameBoard = ({ winningSquares, computer, player, squares, setSquares, setC
           {createSquares(8)}
         </div>
       </article>
-      {/* set conditional to render on win */}
-      <div>
-        <button>
-          PLAY AGAIN
-        </button>
-        <button>
-          SEE RECORD
-        </button>
-      </div>
+      {/* {winningSquares && */}
+        <div className="winning-btns">
+          <button className="win-btn">
+            PLAY AGAIN
+          </button>
+        <button className="win-btn">
+            SEE RECORD
+          </button>
+        </div>
+      {/* } */}
     </section>
   )
 }

@@ -64,7 +64,7 @@ const Square = ({ computer, squareClass, winningSquares, value, index, player, s
         </div>
       } */}
       <div className={className} onClick={() => changeSquare()}>
-        <h2>{value}</h2>
+        <h2 className="square-text">{value}</h2>
       </div>
     </div>
   );

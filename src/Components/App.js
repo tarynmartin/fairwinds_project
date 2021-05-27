@@ -80,7 +80,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header page={landingPage}/>
       {landingPage &&
         <LandingPage setPlayer={setPlayer} playGame={playGame}/>
       }

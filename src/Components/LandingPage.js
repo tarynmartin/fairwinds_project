@@ -1,18 +1,19 @@
 import React from 'react';
+import './LandingPage.css';
 
 const LandingPage = ({setPlayer, playGame}) => {
   return (
-    <section>
-      <h1>PICK YOUR PLAYER</h1>
-      <article>
-        <button onClick={() => setPlayer('X')}>
+    <section className="landing-page">
+      <h2 className="player-title">PICK YOUR PLAYER</h2>
+      <article className="btn-section">
+        <button className="player-btn" onClick={() => setPlayer('X')}>
           X
         </button>
-        <button onClick={() => setPlayer('O')}>
+        <button className="player-btn" onClick={() => setPlayer('O')}>
           O
         </button>
       </article>
-      <button onClick={playGame}>MATCH ME WITH MY OPPONENT</button>
+      <button className="game-start-btn" onClick={playGame}>MATCH ME WITH MY OPPONENT</button>
     </section>
   )
 }

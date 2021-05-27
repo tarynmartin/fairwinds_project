@@ -1,0 +1,41 @@
+.landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.player-title {
+  font-weight: normal;
+  font-size: 30px;
+  margin: 130px 0;
+}
+
+.btn-section {
+  width: 60vw;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 140px;
+}
+
+.player-btn {
+  background-color: transparent;
+  font-size: 70px;
+  color: #201238;
+  border: none;
+  border-bottom: solid;
+  border-color: #d8d8d8;
+  font-family: 'Noto Serif', serif;
+}
+
+.player-btn:focus {
+  border-color: #5db75c;
+}
+
+.game-start-btn {
+  background-color: #201238;
+  font-size: 20px;
+  color: white;
+  padding: 15px 35px;
+  border: none;
+}

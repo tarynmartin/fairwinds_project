@@ -2,17 +2,38 @@
   display: grid;
   grid-template-rows: 1fr 3fr 1fr;
   justify-content: center;
+  padding-top: 100px;
 }
 
 .message {
   grid-row: 1;
 }
 
+.message-title {
+  font-weight: normal;
+  font-size: 30px;
+}
+
 .gameboard {
   grid-row: 2;
+  padding-bottom: 30px;
 }
 
 .row {
   display: flex;
   flex-direction: row;
+}
+
+.winning-btns {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.win-btn {
+  background-color: #201238;
+  font-size: 20px;
+  color: white;
+  padding: 10px 35px;
+  border: none;
 }
