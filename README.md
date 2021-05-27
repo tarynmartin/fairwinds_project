@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Fairwinds Tic Tac Toe Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Brief Description](#brief-description)
+- [How to use](#how-to-use)
+- [Built with](#built-with)
+- [Installation](#installation)
+- [Functionality](#functionality)
+- [Next steps](#next-steps)
+- [Authors](#authors)
+- [Resources](#resources)
 
-### `yarn start`
+<!-- Brief Description -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Brief Description
+This project was a simple tic-tac-toe game that allows a user to play against the computer.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## How to use
+The user can select whether they want to be X or O. Clicking the button at the bottom of the landing page takes you to the game. Currently you can play yourself and the game will declare the winner.
 
-### `yarn test`
+## Built With
+- React 16
+- CSS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `yarn build`
+**Fork this repository:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://github.com/tarynmartin/fairwinds_project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Clone your forked repository**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`git clone` and the copied URL
 
-### `yarn eject`
+**Change into the directory and install the project dependencies**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`cd` into directory and run `npm install` for dependencies
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### How to see the product
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+In terminal, go to the project directory and run 'yarn start' to open the project in the browser. Have fun playing!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Functionality
 
-## Learn More
+### Player Selection & Game Play
+![gif showing user choosing x or o and game play](src/assets/fairwinds.gif)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Next Steps
+- Figure out computer functionality
+- Using local storage to store user & computers wins vs losses
+- Resetting game board
+- Displaying record screen with wins and losses retrieved from local storage
+- Fix styling to look the same outside of mobile view
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Authors
 
-### Code Splitting
+👤 **Taryn Martin**
+- Github: [tarynmartin](https://github.com/tarynmartin)
+- LinkedIn: [Taryn](https://www.linkedin.com/in/tarynmartin919/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Resources
 
-### Analyzing the Bundle Size
+[Project Wireframes](https://www.figma.com/file/xICKzY5CFZjXFubtKohgKx/tic-tac-toe-xo?node-id=1%3A2)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<!-- MARKDOWN LINKS & IMAGES -->
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[contributors-shield]: https://img.shields.io/github/contributors/tarynmartin/fairwinds_project.svg?style=flat-square
+[contributors-url]: https://github.com/tarynmartin/fairwinds_project/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/tarynmartin/fairwinds_project.svg?style=flat-square
+[forks-url]: https://github.com/tarynmartin/fairwinds_project/network/members
