@@ -2,11 +2,21 @@ import React from 'react';
 import Square from './Square';
 import './GameBoard.css';
 
-const GameBoard = ({ winningSquares, player, squares, setSquares, setCurrent }) => {
+const GameBoard = ({ winningSquares, computer, player, squares, setSquares, setCurrent }) => {
   const createSquares = (i) => {
     const squareClass = winningSquares? "no-click" : "square";
     return (
-      <Square squareClass={squareClass} winningSquares={winningSquares} value={squares[i]} index={i} player={player} squares={squares} setSquares={setSquares} setCurrent={setCurrent}/>
+      <Square 
+        computer={computer}
+        squareClass={squareClass} 
+        winningSquares={winningSquares} 
+        value={squares[i]} 
+        index={i} 
+        player={player} 
+        squares={squares} 
+        setSquares={setSquares} 
+        setCurrent={setCurrent}
+      />
     )
   }
 
