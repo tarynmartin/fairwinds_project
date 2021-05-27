@@ -8,12 +8,32 @@ function App() {
   const [player, setPlayer] = useState('');
   const [landingPage, showLanding] = useState(true);
   const [gameboard, showGameboard] = useState(false);
-  const [record, showRecord] = useState(false)
+  // const [record, showRecord] = useState(false)
   const [currentPlayer, setCurrent] = useState('');
   const [computer, setComputer] = useState('');
+  // const [computerChoice, setChoice] = useState(null);
   const [squares, setSquares] = useState([null, null, null, null, null, null, null, null, null]);
-
   const [winningSquares, setWinning] = useState(null);
+
+  // const randomNum = () => {
+  //   return Math.floor(Math.random() * squares.length); 
+  // }
+
+  // const findComputerChoice = () => {
+  //   if (currentPlayer !== '' && currentPlayer === computer) {
+  //     let choice = randomNum();
+  //     if (squares[choice] === null) {
+  //       setChoice(choice)
+  //     } else {
+  //       findComputerChoice()
+  //     }
+  //   }
+  //   console.log('computerChoice', computerChoice);
+  // }
+
+  // useEffect(() => {
+  //   findComputerChoice();
+  // }, [currentPlayer])
 
   useEffect(() => {
     const possibleWins = [
@@ -43,6 +63,9 @@ function App() {
     return false;
   }, [squares])
 
+  // if currentPlayer === computer, have computer play a turn
+  // dependency in useEffect?
+
   const playGame = () => {
     setCurrent(player)
     if (player === 'X') {
@@ -62,7 +85,13 @@ function App() {
         <LandingPage setPlayer={setPlayer} playGame={playGame}/>
       }
       {gameboard && player !== '' &&
-        <GameBoard winningSquares={winningSquares} player={currentPlayer} squares={squares} setSquares={setSquares} setCurrent={setCurrent}/>
+        <GameBoard 
+        winningSquares={winningSquares} 
+        computer={computer} 
+        player={currentPlayer} 
+        squares={squares} 
+        setSquares={setSquares} 
+        setCurrent={setCurrent}/>
       }
     </div>
   );
