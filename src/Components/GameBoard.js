@@ -24,8 +24,7 @@ const GameBoard = ({ winningSquares, computer, player, squares, setSquares, setC
     <section className="game">
       <div className="message">
         {winningSquares && 
-          <h1 className="message-title">{player} WINS AGA
-          IN!</h1>
+          <h1 className="message-title">{player} WINS AGAIN!</h1>
         }
         {!winningSquares && 
           <h1 className="message-title">{player}'S TURN!</h1>
