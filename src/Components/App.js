@@ -11,29 +11,39 @@ function App() {
   // const [record, showRecord] = useState(false)
   const [currentPlayer, setCurrent] = useState('');
   const [computer, setComputer] = useState('');
-  // const [computerChoice, setChoice] = useState(null);
+  const [computerChoice, setChoice] = useState(null);
   const [squares, setSquares] = useState([null, null, null, null, null, null, null, null, null]);
   const [winningSquares, setWinning] = useState(null);
 
-  // const randomNum = () => {
-  //   return Math.floor(Math.random() * squares.length); 
-  // }
+  const randomNum = () => {
+    return Math.floor(Math.random() * squares.length); 
+  }
 
-  // const findComputerChoice = () => {
-  //   if (currentPlayer !== '' && currentPlayer === computer) {
-  //     let choice = randomNum();
-  //     if (squares[choice] === null) {
-  //       setChoice(choice)
-  //     } else {
-  //       findComputerChoice()
-  //     }
-  //   }
-  //   console.log('computerChoice', computerChoice);
-  // }
+  const findComputerChoice = () => {
+    if (currentPlayer !== '' && currentPlayer === computer) {
+      let choice = randomNum();
+      if (squares[choice] === null) {
+        chooseComputerSquare(choice)
+      } else {
+        findComputerChoice()
+      }
+    }
+    console.log('computerChoice', computerChoice);
+  }
 
-  // useEffect(() => {
-  //   findComputerChoice();
-  // }, [currentPlayer])
+  useEffect(() => {
+    findComputerChoice();
+  }, [currentPlayer])
+
+  const chooseComputerSquare = (choice) => {
+    console.log(choice)
+    const splitSquares = squares.slice();
+    splitSquares[choice] = computer;
+    setSquares(splitSquares);
+    if (!winningSquares) {
+      currentPlayer === 'X' ? setCurrent('O') : setCurrent('X');
+    }
+  }
 
   useEffect(() => {
     const possibleWins = [
@@ -86,6 +96,7 @@ function App() {
       }
       {gameboard && player !== '' &&
         <GameBoard 
+        // choice={computerChoice}
         winningSquares={winningSquares} 
         computer={computer} 
         player={currentPlayer} 

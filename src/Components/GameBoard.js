@@ -2,11 +2,12 @@ import React from 'react';
 import Square from './Square';
 import './GameBoard.css';
 
-const GameBoard = ({ winningSquares, computer, player, squares, setSquares, setCurrent }) => {
+const GameBoard = ({ choice, winningSquares, computer, player, squares, setSquares, setCurrent }) => {
   const createSquares = (i) => {
     const squareClass = winningSquares? "no-click" : "square";
     return (
       <Square 
+        choice={choice}
         computer={computer}
         squareClass={squareClass} 
         winningSquares={winningSquares} 

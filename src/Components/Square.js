@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Square.css';
 
-const Square = ({ computer, squareClass, winningSquares, value, index, player, squares, setSquares, setCurrent }) => {
+const Square = ({ choice, computer, squareClass, winningSquares, value, index, player, squares, setSquares, setCurrent }) => {
 
   // const [computerChoice, setChoice] = useState(null);
   const className = squareClass;
@@ -28,10 +28,10 @@ const Square = ({ computer, squareClass, winningSquares, value, index, player, s
   // }, [squares])
 
   // const chooseComputerSquare = () => {
-  //   console.log(computerChoice)
-  //   if (computerChoice) {
+  //   console.log(choice)
+  //   if (choice) {
   //     const splitSquares = squares.slice();
-  //     splitSquares[computerChoice] = player;
+  //     splitSquares[choice] = player;
   //     setSquares(splitSquares);
   //     value = player;
   //     if (!winningSquares) {
@@ -41,9 +41,10 @@ const Square = ({ computer, squareClass, winningSquares, value, index, player, s
   // }
 
   const changeSquare = () => {
-    console.log('player', player)
+    // console.log('player', player)
     // console.log('computer', computer)
     const splitSquares = squares.slice();
+    // could have just made a copy to change?
     splitSquares[index] = player;
     setSquares(splitSquares);
     value = player;
@@ -52,17 +53,17 @@ const Square = ({ computer, squareClass, winningSquares, value, index, player, s
     }
   }
 
-  // if (computerChoice) {
+  // if (choice) {
   //   chooseComputerSquare();
   // }
 
   return (
     <div>
-      {/* {(computerChoice && computerChoice === index) &&
+      {(choice && choice === index) &&
         <div className={className} onChange={() => console.log('here')} >
           <h2>{player}</h2>
         </div>
-      } */}
+      }
       <div className={className} onClick={() => changeSquare()}>
         <h2 className="square-text">{value}</h2>
       </div>
