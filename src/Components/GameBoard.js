@@ -47,7 +47,7 @@ const GameBoard = ({ winningSquares, computer, player, squares, setSquares, setC
           {createSquares(8)}
         </div>
       </article>
-      {/* {winningSquares && */}
+      {winningSquares &&
         <div className="winning-btns">
           <button className="win-btn">
             PLAY AGAIN
@@ -56,7 +56,7 @@ const GameBoard = ({ winningSquares, computer, player, squares, setSquares, setC
             SEE RECORD
           </button>
         </div>
-      {/* } */}
+      }
     </section>
   )
 }
